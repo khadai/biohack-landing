@@ -67,12 +67,25 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="section partners">
-          {partners.map((partner) => (
-            <div className="partner-item" key={partner.alt}>
-              <Image src={partner.src} alt={partner.alt} />
+        <section className=" partners">
+          <div className="partners-ticker" aria-label="Партнери">
+            <div className="partners-track">
+              <div className="partners-group">
+                {partners.map((partner) => (
+                  <div className="partner-item" key={partner.alt}>
+                    <Image src={partner.src} alt={partner.alt} />
+                  </div>
+                ))}
+              </div>
+              <div className="partners-group" aria-hidden="true">
+                {partners.map((partner, index) => (
+                  <div className="partner-item" key={`${partner.alt}-${index}`}>
+                    <Image src={partner.src} alt="" />
+                  </div>
+                ))}
+              </div>
             </div>
-          ))}
+          </div>
         </section>
 
         <section className="section quote">

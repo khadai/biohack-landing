@@ -159,33 +159,72 @@ body {
     padding: 12px 1.35rem;
     font-size: 1rem;
     line-height: 1;
-    background:
-        linear-gradient(var(--line), var(--line)) left top / 10px 2px no-repeat,
-        linear-gradient(var(--line), var(--line)) left bottom / 10px 2px no-repeat,
-        linear-gradient(var(--line), var(--line)) left center / 2px 100% no-repeat,
-        linear-gradient(var(--line), var(--line)) right top / 10px 2px no-repeat,
-        linear-gradient(var(--line), var(--line)) right bottom / 10px 2px no-repeat,
-        linear-gradient(var(--line), var(--line)) right center / 2px 100% no-repeat;
+    background: linear-gradient(var(--line), var(--line)) left top / 10px 2px no-repeat,
+    linear-gradient(var(--line), var(--line)) left bottom / 10px 2px no-repeat,
+    linear-gradient(var(--line), var(--line)) left center / 2px 100% no-repeat,
+    linear-gradient(var(--line), var(--line)) right top / 10px 2px no-repeat,
+    linear-gradient(var(--line), var(--line)) right bottom / 10px 2px no-repeat,
+    linear-gradient(var(--line), var(--line)) right center / 2px 100% no-repeat;
 }
 
 .partners {
-    display: grid;
-    grid-template-columns: repeat(6, minmax(82px, 1fr));
+    /*padding-block: 1.1rem;*/
+    overflow: hidden;
+    border-top: 2px solid var(--line);
+}
+
+.partners-ticker {
+    width: 100%;
+    overflow: hidden;
+}
+
+.partners-track {
+    display: flex;
+    width: max-content;
+}
+
+.partners-group {
+    display: flex;
     align-items: center;
-    gap: 1rem;
-    padding-block: 1.1rem;
+    gap: 2.75rem;
+    padding-right: 2.75rem;
+    flex: 0 0 auto;
+    min-width: max-content;
+    animation-name: partners-ticker;
+    animation-duration: 14s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    will-change: transform;
+}
+
+.partners-group:nth-child(2) {
+    animation-delay: -7s;
 }
 
 .partner-item {
-    display: flex;
+    width: 208px;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
+    flex: 0 0 auto;
+    /*padding: 0 32px;*/
 }
 
 .partner-item img {
-    width: auto;
-    max-width: 100%;
-    max-height: 54px;
+    display: block;
+    width: auto !important;
+    height: auto !important;
+    max-width: none !important;
+    max-height: none !important;
+}
+
+@keyframes partners-ticker {
+    from {
+        transform: translate3d(0, 0, 0);
+    }
+    to {
+        transform: translate3d(-100%, 0, 0);
+    }
 }
 
 .quote {
@@ -304,8 +343,14 @@ body {
         font-size: 0.95rem;
     }
 
-    .partners {
-        grid-template-columns: repeat(3, minmax(100px, 1fr));
+    .partners-group {
+        gap: 2rem;
+        padding-right: 2rem;
+        animation-duration: 12s;
+    }
+
+    .partners-group:nth-child(2) {
+        animation-delay: -6s;
     }
 
     .about,
@@ -345,7 +390,13 @@ body {
         margin-top: 0.3rem;
     }
 
-    .partners {
-        grid-template-columns: repeat(2, minmax(100px, 1fr));
+    .partners-group {
+        gap: 1.5rem;
+        padding-right: 1.5rem;
+        animation-duration: 10s;
+    }
+
+    .partners-group:nth-child(2) {
+        animation-delay: -5s;
     }
 }
