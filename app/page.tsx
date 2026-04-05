@@ -35,11 +35,11 @@ export default function Home() {
           <a href="#register">Реєстрація</a>
         </nav>
         <div className="header-actions">
-          <a className="icon-link" href="#" aria-label="Instagram">
-            ◉
-          </a>
+          {/*<a className="icon-link" href="#" aria-label="Instagram">*/}
+          {/*  ◉*/}
+          {/*</a>*/}
           <a className="apply-button" href="#register">
-            Подати заявку ↗
+            Подати заявку
           </a>
         </div>
       </header>
@@ -51,7 +51,7 @@ export default function Home() {
           </div>
           <div className="hero-meta">1 травня 2026 | Lviv Open Lab</div>
           <div className="hero-content">
-            <h1>ІІ УЧНІВСЬКИЙ БІОХАКАТОН</h1>
+            <h1>ІІ<br /> УЧНІВСЬКИЙ БІОХАКАТОН</h1>
             <p className="hero-subtitle">Біотехнології після війни</p>
             <p className="hero-copy">
               Одноденний науково-технічний інтенсив у Львові,
@@ -62,7 +62,7 @@ export default function Home() {
               <a className="primary-button" href="#">
                 Зареєструвати команду
               </a>
-              <span className="hero-note">1 вчитель + 3/4 учні</span>
+              <span className="hero-note">1 вчитель + 3-4 учні</span>
             </div>
           </div>
         </section>
