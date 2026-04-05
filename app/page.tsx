@@ -1,41 +1,138 @@
 import Image from "next/image";
+import heroImage from "./assets/hero-section-image.png";
+import biomniLogo from "./assets/partners-logos/biomni.svg";
+import explogenLogo from "./assets/partners-logos/explogen.svg";
+import lnuLogo from "./assets/partners-logos/lnu.svg";
+import lvivdepLogo from "./assets/partners-logos/lvivdep.svg";
+import lvivOpenLabLogo from "./assets/partners-logos/lvivopenlab.svg";
+import stLogo from "./assets/partners-logos/st.svg";
 
 export default function Home() {
-    return (
-        <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans ">
-            <main
-                className="flex flex-1 w-full max-w-3xl flex-col items-center py-32 px-16 bg-white sm:items-start">
-                <Image
-                    // className="dark:invert"
-                    src="/logo.svg"
-                    alt="Next.js logo"
-                    width={100}
-                    height={100}
-                    priority
-                />
-                <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left pt-24">
-                    <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black">
-                        ІІ Учнівський біохакатон
-                    </h1>
-                    <p className="max-w-md text-lg leading-8 text-zinc-600">
-                        Біотехнології після війни
-                        <br/>
-                        📆{"   "}1 травня 2026
-                        <br/>
-                        📍 просп. Червоної Калини, 58 (Lviv Open Lab)
-                    </p>
-                </div>
-                <div className="flex flex-col gap-4 text-base font-medium sm:flex-row pt-24">
-                    <a
-                        className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] md:w-[258px]"
-                        // href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-                        // target="_blank"
-                        // rel="noopener noreferrer"
-                    >
-                        Реєстрація вже скоро!
-                    </a>
-                </div>
-            </main>
+  const partners = [
+    { src: lvivOpenLabLogo, alt: "Lviv Open Lab" },
+    { src: lvivdepLogo, alt: "Львівська міська рада" },
+    { src: stLogo, alt: "ST" },
+    { src: biomniLogo, alt: "Biomni" },
+    { src: lnuLogo, alt: "ЛНУ" },
+    { src: explogenLogo, alt: "Explogen" },
+  ];
+
+  return (
+    <div className="landing">
+      <header className="header">
+        <div className="brand">
+          <Image
+              src="/logo.svg"
+              alt="Logo"
+              width={40}
+              height={56}
+              priority
+          />
+          <span>БІОХАКАТОН UA</span>
         </div>
-    );
+        <nav className="nav-links">
+          <a href="#about">Про нас</a>
+          <a href="#register">Реєстрація</a>
+        </nav>
+        <div className="header-actions">
+          {/*<a className="icon-link" href="#" aria-label="Instagram">*/}
+          {/*  ◉*/}
+          {/*</a>*/}
+          <a className="apply-button" href="#register">
+            Подати заявку
+          </a>
+        </div>
+      </header>
+
+      <main>
+        <section className="section hero">
+          <div className="hero-image-wrap">
+            <Image src={heroImage} alt="Зображення біохакатону" priority />
+          </div>
+          <div className="hero-meta">1 травня 2026 | Lviv Open Lab</div>
+          <div className="hero-content">
+            <h1>ІІ<br /> УЧНІВСЬКИЙ БІОХАКАТОН</h1>
+            <p className="hero-subtitle">Біотехнології після війни</p>
+            <p className="hero-copy">
+              Одноденний науково-технічний інтенсив у Львові,
+              <br />
+              де біологія стає інструментом відновлення України.
+            </p>
+            <div className="hero-actions" id="register">
+              <a className="primary-button" href="#">
+                Зареєструвати команду
+              </a>
+              <span className="hero-note">1 вчитель + 3-4 учні</span>
+            </div>
+          </div>
+        </section>
+
+        <section className=" partners">
+          <div className="partners-ticker" aria-label="Партнери">
+            <div className="partners-track">
+              <div className="partners-group">
+                {partners.map((partner) => (
+                  <div className="partner-item" key={partner.alt}>
+                    <Image src={partner.src} alt={partner.alt} />
+                  </div>
+                ))}
+              </div>
+              <div className="partners-group" aria-hidden="true">
+                {partners.map((partner, index) => (
+                  <div className="partner-item" key={`${partner.alt}-${index}`}>
+                    <Image src={partner.src} alt="" />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="section quote">
+          Ми поєднуємо{" "}
+          <span className="highlight">науку, креативність та інженерію</span>
+          <br />
+          для створення майбутнього вже сьогодні.
+        </section>
+
+        <section className="section about" id="about">
+          <h2>ПРО НАС</h2>
+          <p>
+            Команда «Біохакатон UA» — це спільнота однодумців, науковців та
+            освітян, які вірять, що біотехнології є ключем до відродження нашої
+            країни. Ми створюємо освітній біотехнологічний хаб, що об&apos;єднує
+            школи, університети та бізнес.
+            <br />
+            <br />
+            Біохакатон — це не просто конкурс, а простір для експериментів. На
+            учасників чекають дорослі досліди, програмування живих модельних
+            систем та нові знайомства і друзі.
+          </p>
+        </section>
+      </main>
+
+      <footer className="section footer">
+        <div className="socials">
+          <a href="#" aria-label="Instagram">
+            ◉
+          </a>
+          <a href="#" aria-label="Facebook">
+            f
+          </a>
+          <a href="#" aria-label="Telegram">
+            ✈
+          </a>
+        </div>
+        <p>
+          Разом із університетами, STEM-хабами та біотех-компаніями будуємо
+          наукове майбутнє.
+        </p>
+        <p className="footer-strong">Наука, що наближає перемогу!</p>
+      </footer>
+      <div className="bottom-strip">
+        <span>© 2026 Біохакатон UA.</span>
+        <span className="menu-mark">☰</span>
+      </div>
+    </div>
+  );
 }
