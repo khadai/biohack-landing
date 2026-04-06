@@ -79,7 +79,18 @@ body {
 
 .victory-text {
     font-size: 24px;
-    max-width: 260px;
+    max-width: 263px;
+    font-weight: 500;
+}
+
+.slogan {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--line);
+    /*background: var(--accent);*/
+    padding: 0.7rem clamp(1rem, 4vw, 2.875rem);
+    font-size: 0.75rem;
 }
 
 .apply-button {
@@ -174,46 +185,18 @@ body {
 }
 
 .partners {
-    /*padding-block: 1.1rem;*/
+    width: calc(100vw - 40px);
+    padding-block: 0.9rem;
     overflow: hidden;
     border-top: 2px solid var(--line);
 }
 
-.partners-ticker {
-    width: 100%;
-    overflow: hidden;
-}
-
-.partners-track {
-    display: flex;
-    width: max-content;
-}
-
-.partners-group {
-    display: flex;
-    align-items: center;
-    gap: 2.75rem;
-    padding-right: 2.75rem;
-    flex: 0 0 auto;
-    min-width: max-content;
-    animation-name: partners-ticker;
-    animation-duration: 14s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    will-change: transform;
-}
-
-.partners-group:nth-child(2) {
-    animation-delay: -7s;
-}
-
 .partner-item {
-    width: 208px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     flex: 0 0 auto;
-    /*padding: 0 32px;*/
+    padding: 0 1.4rem;
 }
 
 .partner-item img {
@@ -222,15 +205,6 @@ body {
     height: auto !important;
     max-width: none !important;
     max-height: none !important;
-}
-
-@keyframes partners-ticker {
-    from {
-        transform: translate3d(0, 0, 0);
-    }
-    to {
-        transform: translate3d(-100%, 0, 0);
-    }
 }
 
 .quote {
@@ -244,16 +218,6 @@ body {
 .highlight {
     background-color: var(--accent);
     padding-inline: 0.2em;
-}
-
-.quote::after {
-    content: "";
-    position: absolute;
-    right: 0;
-    top: 2.84rem;
-    width: 20%;
-    height: 0.95em;
-    background: var(--accent);
 }
 
 .about {
@@ -349,14 +313,8 @@ body {
         font-size: 0.95rem;
     }
 
-    .partners-group {
-        gap: 2rem;
-        padding-right: 2rem;
-        animation-duration: 12s;
-    }
-
-    .partners-group:nth-child(2) {
-        animation-delay: -6s;
+    .partner-item {
+        padding: 0 1.1rem;
     }
 
     .about,
@@ -400,13 +358,7 @@ body {
         margin-top: 0.3rem;
     }
 
-    .partners-group {
-        gap: 1.5rem;
-        padding-right: 1.5rem;
-        animation-duration: 10s;
-    }
-
-    .partners-group:nth-child(2) {
-        animation-delay: -5s;
+    .partner-item {
+        padding: 0 0.8rem;
     }
 }
