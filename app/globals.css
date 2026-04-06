@@ -246,16 +246,6 @@ body {
     padding-inline: 0.2em;
 }
 
-.quote::after {
-    content: "";
-    position: absolute;
-    right: 0;
-    top: 2.84rem;
-    width: 20%;
-    height: 0.95em;
-    background: var(--accent);
-}
-
 .about {
     display: grid;
     grid-template-columns: minmax(140px, 0.4fr) 1fr;
