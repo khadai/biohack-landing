@@ -7,6 +7,7 @@ import lnuLogo from "./assets/partners-logos/lnu.svg";
 import lvivdepLogo from "./assets/partners-logos/lvivdep.svg";
 import lvivOpenLabLogo from "./assets/partners-logos/lvivopenlab.svg";
 import stLogo from "./assets/partners-logos/st.svg";
+import arrowRightTopIcon from "./assets/icons/arrow--up-right.svg";
 
 
 const FORM_LINK = 'https://forms.gle/zL73tnoRtotMggKP9'
@@ -35,7 +36,7 @@ export default function Home() {
                 </div>
                 <nav className="nav-links">
                     <a href="#about">Про нас</a>
-                    <a href="#register">Реєстрація</a>
+                    {/*<a href="#register">Реєстрація</a>*/}
                 </nav>
                 <div className="header-actions">
                     {/*<a className="icon-link" href="#" aria-label="Instagram">*/}
@@ -45,6 +46,13 @@ export default function Home() {
                        href={FORM_LINK}
                        target='_blank'>
                         Подати заявку
+                        <Image
+                            src={arrowRightTopIcon}
+                            alt="arr"
+                            width={22}
+                            height={22}
+                            priority
+                        />
                     </a>
                 </div>
             </header>
@@ -81,7 +89,7 @@ export default function Home() {
                         gradient={false}
                         pauseOnHover
                         aria-label="Партнери"
-                        style={{ width: "calc(100% - 40px)" }}
+                        style={{ width: "100%" }}
                         // gradient={false}
                     >
                         {partners.map((partner) => (
@@ -99,7 +107,7 @@ export default function Home() {
                     для створення майбутнього вже сьогодні.
                 </section>
 
-                <section className="section about" id="about">
+                <section className=" about" id="about">
                     <h2>ПРО НАС</h2>
                     <p>
                         Команда «Біохакатон UA» — це спільнота науковців, освітян
