@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import Marquee from "react-fast-marquee";
 import heroImage from "./assets/hero-section-image.png";
@@ -81,6 +83,8 @@ export default function Home() {
                         gradient={false}
                         pauseOnHover
                         aria-label="Партнери"
+                        style={{ width: "calc(100% - 40px)" }}
+                        // gradient={false}
                     >
                         {partners.map((partner) => (
                             <div className="partner-item" key={partner.alt}>

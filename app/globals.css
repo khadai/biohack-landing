@@ -185,6 +185,7 @@ body {
 }
 
 .partners {
+    width: calc(100vw - 40px);
     padding-block: 0.9rem;
     overflow: hidden;
     border-top: 2px solid var(--line);
