@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Marquee from "react-fast-marquee";
 import heroImage from "./assets/hero-section-image.png";
 import biomniLogo from "./assets/partners-logos/biomni.svg";
 import explogenLogo from "./assets/partners-logos/explogen.svg";
@@ -73,25 +74,20 @@ export default function Home() {
                     </div>
                 </section>
 
-                <section className=" partners">
-                    <div className="partners-ticker" aria-label="Партнери">
-                        <div className="partners-track">
-                            <div className="partners-group">
-                                {partners.map((partner) => (
-                                    <div className="partner-item" key={partner.alt}>
-                                        <Image src={partner.src} alt={partner.alt}/>
-                                    </div>
-                                ))}
+                <section className="section partners">
+                    <Marquee
+                        autoFill
+                        speed={42}
+                        gradient={false}
+                        pauseOnHover
+                        aria-label="Партнери"
+                    >
+                        {partners.map((partner) => (
+                            <div className="partner-item" key={partner.alt}>
+                                <Image src={partner.src} alt={partner.alt}/>
                             </div>
-                            <div className="partners-group" aria-hidden="true">
-                                {partners.map((partner, index) => (
-                                    <div className="partner-item" key={`${partner.alt}-${index}`}>
-                                        <Image src={partner.src} alt=""/>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-                    </div>
+                        ))}
+                    </Marquee>
                 </section>
 
                 <section className="section quote">
@@ -104,7 +100,7 @@ export default function Home() {
                 <section className="section about" id="about">
                     <h2>ПРО НАС</h2>
                     <p>
-                        Команда «Біохакатон UA» — це спільнота науковців освітян
+                        Команда «Біохакатон UA» — це спільнота науковців, освітян
                         та практиків, які вірять, що біотехнології є ключем до відродження нашої
                         країни. Ми створюємо освітній біотехнологічний хаб, що об&apos;єднує
                         школи, університети та бізнес.
@@ -133,7 +129,7 @@ export default function Home() {
                     Разом із університетами, STEM-хабами та біотех-компаніями будуємо
                     наукове майбутнє.
                 </p>
-                <p className="footer-strong victory-text">Наука, що наближає Перемогу!</p>
+                <p className="victory-text footer-strong">Наука, що наближає Перемогу!</p>
             </footer>
             <div className="bottom-strip">
                 <span>© 2026 Біохакатон UA. Усі права захищені</span>
