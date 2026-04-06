@@ -7,6 +7,8 @@ import lvivdepLogo from "./assets/partners-logos/lvivdep.svg";
 import lvivOpenLabLogo from "./assets/partners-logos/lvivopenlab.svg";
 import stLogo from "./assets/partners-logos/st.svg";
 
+
+const FORM_LINK = 'https://forms.gle/zL73tnoRtotMggKP9'
 export default function Home() {
     const partners = [
         {src: lvivOpenLabLogo, alt: "Lviv Open Lab"},
@@ -39,7 +41,7 @@ export default function Home() {
                     {/*  ◉*/}
                     {/*</a>*/}
                     <a className="apply-button"
-                       href="https://docs.google.com/forms/d/e/1FAIpQLSewgVPxmdWa7_CQ9nDquRHNNQpOfq7f2PDpmIqWULx2IddUZA/viewform"
+                       href={FORM_LINK}
                        target='_blank'>
                         Подати заявку
                     </a>
@@ -51,18 +53,18 @@ export default function Home() {
                     <div className="hero-image-wrap">
                         <Image src={heroImage} alt="Зображення біохакатону" priority/>
                     </div>
-                    <div className="hero-meta">1 травня 2026 | Lviv Open Lab</div>
+                    <div className="hero-meta">1 травня 2026 | Біохакатон UA</div>
                     <div className="hero-content">
                         <h1>ІІ<br/> УЧНІВСЬКИЙ БІОХАКАТОН</h1>
                         <p className="hero-subtitle">Біотехнології після війни</p>
                         <p className="hero-copy">
                             Одноденний науково-технічний інтенсив у Львові,
                             <br/>
-                            де біологія стає інструментом відновлення України.
+                            де біотехнологія стає інструментом відновлення України.
                         </p>
                         <div className="hero-actions" id="register">
                             <a className="primary-button"
-                               href="https://docs.google.com/forms/d/e/1FAIpQLSewgVPxmdWa7_CQ9nDquRHNNQpOfq7f2PDpmIqWULx2IddUZA/viewform"
+                               href={FORM_LINK}
                                target='_blank'>
                                 Зареєструвати команду
                             </a>
@@ -102,14 +104,14 @@ export default function Home() {
                 <section className="section about" id="about">
                     <h2>ПРО НАС</h2>
                     <p>
-                        Команда «Біохакатон UA» — це спільнота однодумців, науковців та
-                        освітян, які вірять, що біотехнології є ключем до відродження нашої
+                        Команда «Біохакатон UA» — це спільнота науковців освітян
+                        та практиків, які вірять, що біотехнології є ключем до відродження нашої
                         країни. Ми створюємо освітній біотехнологічний хаб, що об&apos;єднує
                         школи, університети та бізнес.
                         <br/>
                         <br/>
                         Біохакатон — це не просто конкурс, а простір для експериментів. На
-                        учасників чекають дорослі досліди, програмування живих модельних
+                        учасників чекають справжні досліди, віртуальне моделювання живих
                         систем та нові знайомства і друзі.
                     </p>
                 </section>
@@ -131,10 +133,10 @@ export default function Home() {
                     Разом із університетами, STEM-хабами та біотех-компаніями будуємо
                     наукове майбутнє.
                 </p>
-                <p className="footer-strong">Наука, що наближає перемогу!</p>
+                <p className="footer-strong victory-text">Наука, що наближає Перемогу!</p>
             </footer>
             <div className="bottom-strip">
-                <span>© 2026 Біохакатон UA.</span>
+                <span>© 2026 Біохакатон UA. Усі права захищені</span>
                 <Image
                     src="/logo.svg"
                     alt="Logo"
