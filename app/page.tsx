@@ -113,7 +113,7 @@ export default function Home() {
                 </section>
             </main>
 
-            <footer className="section footer">
+            <footer className="slogan">
                 {/*<div className="socials">*/}
                 {/*    <a href="#" aria-label="Instagram">*/}
                 {/*        ◉*/}
@@ -129,7 +129,7 @@ export default function Home() {
                     Разом із університетами, STEM-хабами та біотех-компаніями будуємо
                     наукове майбутнє.
                 </p>
-                <p className="victory-text footer-strong">Наука, що наближає Перемогу!</p>
+                <span className="victory-text">Наука, що наближає Перемогу!</span>
             </footer>
             <div className="bottom-strip">
                 <span>© 2026 Біохакатон UA. Усі права захищені</span>
