@@ -21,6 +21,7 @@ body {
     margin: 0 auto;
     max-width: 1440px;
     min-height: 100vh;
+    padding: 0 20px;
 }
 
 .section {
@@ -365,6 +366,10 @@ body {
 }
 
 @media (max-width: 760px) {
+    body {
+        padding: 0 20px;
+    }
+
     .header {
         flex-wrap: wrap;
         padding-block: 1rem;
