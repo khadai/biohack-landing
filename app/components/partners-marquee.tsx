@@ -18,8 +18,8 @@ export function PartnersMarquee() {
         style={{ width: "100%" }}
       >
         {partnerLogos.map((partner) => (
-          <div className="partner-item" key={partner.alt}>
-            <Image src={partner.src} alt={partner.alt} />
+          <div className="partner-item" key={partner.alt} title={partner.alt}>
+            <Image src={partner.src} alt={partner.alt} title={partner.alt} />
           </div>
         ) as ReactElement)}
       </Marquee>
