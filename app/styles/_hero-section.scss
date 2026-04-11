@@ -1,6 +1,6 @@
 .hero {
   display: grid;
-  grid-template-columns: minmax(320px, 1.2fr) minmax(30px, auto) 1fr;
+  grid-template-columns: minmax(320px, 1.2fr) 1fr;
   gap: clamp(1rem, 2.3vw, 2.9rem);
   align-items: stretch;
   padding-block: clamp(1.5rem, 3.3vw, 2.25rem);

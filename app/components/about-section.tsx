@@ -1,11 +1,11 @@
 export function AboutSection() {
   return (
     <>
-      <section className="section narrow quote">
+      <section className="section narrow quote" id="about">
         Ми поєднуємо <span className="highlight">науку, креативність та інженерію</span>
         <br />
         для створення майбутнього вже сьогодні.
-        <div className="about" id="about">
+        <div className="about">
           <h2>ПРО НАС</h2>
           <p>
             Команда «Біохакатон UA» — це спільнота науковців, освітян та практиків, які вірять, що

@@ -1,11 +1,16 @@
 import Image from "next/image";
+import { IG_LINK } from "@/app/lib/constants";
+import igImage from "@/app/assets/icons/instagram.svg";
 
 export function SiteFooter() {
   return (
     <>
       <div className="section">
         <footer className="slogan">
-          <p>Разом із університетами, STEM-хабами та біотех-компаніями будуємо наукове майбутнє.</p>
+          {/*<p>Разом із університетами, STEM-хабами та біотех-компаніями будуємо наукове майбутнє.</p>*/}
+          <a href={IG_LINK} target="_blank" rel="noreferrer">
+            <Image src={igImage} alt="IG" />
+          </a>
           <span>
             <p style={{ fontWeight: 500 }}>Email</p>
             <p>
