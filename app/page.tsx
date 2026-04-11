@@ -15,7 +15,6 @@ export default function Home() {
       <main>
         <HeroSection />
         <PartnersMarquee />
-        {/*<QuoteSection />*/}
         <AboutSection />
         <WhatWillItBeSection />
         <TeamSection />

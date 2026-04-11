@@ -11,8 +11,8 @@ export function WhatWillItBeSection() {
       <h2>ЩО ЦЕ БУДЕ?</h2>
       <p className="what-will__intro">
         Один день, що змінить твій погляд на науку. Це не олімпіада, це{" "}
-        <span className="what-will__accent">драйвовий хакатон</span> між
-        командами мотивованих учнів.
+        <span className="what-will__accent">драйвовий хакатон</span> між командами мотивованих
+        учнів.
       </p>
 
       <div className="what-will__grid">
@@ -27,8 +27,8 @@ export function WhatWillItBeSection() {
           />
           <div className="what-will__card what-will__card--cw">
             <p>
-              <span className="what-will__accent">Круті досліди</span>
-              : від виділення ДНК до клонування організмів.
+              <span className="what-will__accent">Круті досліди</span>: від виділення ДНК до
+              клонування організмів.
             </p>
           </div>
         </div>
@@ -44,8 +44,8 @@ export function WhatWillItBeSection() {
           />
           <div className="what-will__card what-will__card--ccw">
             <p>
-              <span className="what-will__accent">Лекції</span> від профі на
-              топові біотехнологічні теми.
+              <span className="what-will__accent">Лекції</span> від профі на топові біотехнологічні
+              теми.
             </p>
           </div>
         </div>
@@ -61,28 +61,17 @@ export function WhatWillItBeSection() {
           />
           <div className="what-will__card what-will__card--cw">
             <p>
-              <span className="what-will__accent">Створення</span> власного
-              інноваційного проєкту з нуля.
+              <span className="what-will__accent">Створення</span> власного інноваційного проєкту з
+              нуля.
             </p>
           </div>
         </div>
       </div>
 
       <div className="what-will__cta">
-        <a
-          className="what-will__docs-btn"
-          href={EVENT_DOCS_LINK}
-          target="_blank"
-          rel="noreferrer"
-        >
+        <a className="what-will__docs-btn" href={EVENT_DOCS_LINK} target="_blank" rel="noreferrer">
           Переглянути документи події
-          <Image
-            src={arrowRightTopIcon}
-            alt=""
-            width={22}
-            height={22}
-            aria-hidden
-          />
+          <Image src={arrowRightTopIcon} alt="" width={22} height={22} aria-hidden />
         </a>
       </div>
     </section>

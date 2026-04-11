@@ -6,13 +6,7 @@ export function SiteHeader() {
   return (
     <header className="header">
       <div className="brand">
-        <Image
-          src="/logo.svg"
-          alt="Logo"
-          width={40}
-          height={56}
-          priority
-        />
+        <Image src="/logo.svg" alt="Logo" width={40} height={56} priority />
         <span>БІОХАКАТОН UA</span>
       </div>
       <nav className="nav-links">
@@ -21,13 +15,7 @@ export function SiteHeader() {
       <div className="header-actions">
         <a className="apply-button" href={FORM_LINK} target="_blank" rel="noreferrer">
           Подати заявку
-          <Image
-            src={arrowRightTopIcon}
-            alt=""
-            width={22}
-            height={22}
-            priority
-          />
+          <Image src={arrowRightTopIcon} alt="" width={22} height={22} priority />
         </a>
       </div>
     </header>

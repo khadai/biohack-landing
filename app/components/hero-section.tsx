@@ -11,7 +11,8 @@ export function HeroSection() {
       <div className="hero-meta">1 травня 2026 | Біохакатон UA</div>
       <div className="hero-content">
         <h1>
-          ІІ<br /> УЧНІВСЬКИЙ БІОХАКАТОН
+          ІІ
+          <br /> УЧНІВСЬКИЙ БІОХАКАТОН
         </h1>
         <p className="hero-subtitle">Біотехнології після війни</p>
         <p className="hero-copy">
