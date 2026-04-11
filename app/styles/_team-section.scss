@@ -1,0 +1,247 @@
+.team-section {
+  --team-blue: #2920ee;
+  padding-block: clamp(2.6rem, 6.5vw, 5rem);
+  display: grid;
+  gap: clamp(1rem, 2.6vw, 1.4rem);
+
+  h2 {
+    margin: 0;
+    font-size: clamp(2rem, 3.2vw, 2.95rem);
+    line-height: 1.06;
+    letter-spacing: 0.02em;
+  }
+}
+
+.team-section__lead {
+  margin: 0;
+  color: var(--team-blue);
+  font-size: clamp(1.5rem, 2.1vw, 2rem);
+  line-height: 1.2;
+}
+
+.team-section__rules {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.8rem 1.25rem;
+}
+
+.team-section__bracket {
+  margin: 0;
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.85rem;
+  padding: 0.45rem 1.1rem;
+  font-size: clamp(1.15rem, 1.6vw, 1.9rem);
+  line-height: 1.2;
+  background:
+    linear-gradient(#000, var(--line)) left top / 11px 2px no-repeat,
+    linear-gradient(#000, var(--line)) left bottom / 11px 2px no-repeat,
+    linear-gradient(#000, var(--line)) left center / 2px 100% no-repeat,
+    linear-gradient(#000, var(--line)) right top / 11px 2px no-repeat,
+    linear-gradient(#000, var(--line)) right bottom / 11px 2px no-repeat,
+    linear-gradient(#000, var(--line)) right center / 2px 100% no-repeat;
+}
+
+.team-section__bracket--compact {
+  font-weight: 500;
+}
+
+.team-section__image-wrap {
+  overflow: hidden;
+  margin-top: 0.3rem;
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.team-section__meta {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-top: 0.15rem;
+
+  p {
+    margin: 0;
+    font-size: clamp(1.02rem, 1.2vw, 1.5rem);
+    line-height: 1.35;
+  }
+}
+
+.team-section__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3rem;
+  padding: 0.35rem 1.25rem;
+  border: 2px solid #1a16a8;
+  background: var(--team-blue);
+  color: #fff;
+  font-size: clamp(1rem, 1.15vw, 1.35rem);
+  line-height: 1;
+  text-decoration: none;
+  letter-spacing: 0.01em;
+}
+
+.team-section__notes {
+  position: relative;
+  display: grid;
+  gap: clamp(0.8rem, 1.7vw, 1.2rem);
+  margin-top: 0.7rem;
+}
+
+.team-section__card {
+  border: 2px solid var(--line);
+  padding: 0.75rem 1rem;
+  width: fit-content;
+  max-width: 92%;
+
+  p {
+    margin: 0;
+    font-size: clamp(1.12rem, 1.38vw, 1.65rem);
+    line-height: 1.3;
+  }
+
+  span {
+    color: var(--team-blue);
+  }
+}
+
+.team-section__card--left {
+  justify-self: start;
+}
+
+.team-section__card--right {
+  justify-self: end;
+  margin-top: 0.8rem;
+}
+
+.team-section__burst {
+  position: absolute;
+  top: -0.15rem;
+  right: 35%;
+  width: 44px;
+  height: 34px;
+  pointer-events: none;
+}
+
+.team-section__burst::before,
+.team-section__burst::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 20px;
+  background: var(--team-blue);
+  transform-origin: bottom center;
+}
+
+.team-section__burst::before {
+  left: 14px;
+  top: 8px;
+  transform: rotate(28deg);
+}
+
+.team-section__burst::after {
+  left: 28px;
+  top: 3px;
+  transform: rotate(48deg);
+}
+
+.team-section__spark {
+  position: absolute;
+  right: -0.2rem;
+  top: 4.8rem;
+  width: 34px;
+  height: 34px;
+  transform: rotate(45deg);
+}
+
+.team-section__spark::before,
+.team-section__spark::after {
+  content: "";
+  position: absolute;
+  background: var(--team-blue);
+}
+
+.team-section__spark::before {
+  left: 0;
+  right: 0;
+  top: 16px;
+  height: 2px;
+}
+
+.team-section__spark::after {
+  top: 0;
+  bottom: 0;
+  left: 16px;
+  width: 2px;
+}
+
+.team-section__coffee {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-size: clamp(1.25rem, 1.8vw, 1.85rem);
+  line-height: 1.2;
+  margin-top: 0.55rem;
+
+  span {
+    color: var(--team-blue);
+    font-size: 1.8em;
+    line-height: 0.8;
+    transform: translateY(-0.06em);
+  }
+}
+
+@media (max-width: 1040px) {
+  .team-section__spark {
+    right: 0.3rem;
+    top: 5.9rem;
+  }
+
+  .team-section__card {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 760px) {
+  .team-section__lead {
+    font-size: 1.45rem;
+  }
+
+  .team-section__bracket {
+    font-size: 1.05rem;
+  }
+
+  .team-section__meta {
+    gap: 0.85rem;
+  }
+
+  .team-section__cta {
+    width: 100%;
+  }
+
+  .team-section__card {
+    width: 100%;
+  }
+
+  .team-section__card--right {
+    justify-self: start;
+    margin-top: 0;
+  }
+
+  .team-section__burst,
+  .team-section__spark {
+    display: none;
+  }
+
+  .team-section__coffee {
+    font-size: 1.25rem;
+  }
+}
