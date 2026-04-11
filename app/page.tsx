@@ -1,4 +1,5 @@
 import { AboutSection } from "./components/about-section";
+import { WhatWillItBeSection } from "./components/what-will-it-be-section";
 import { HeroSection } from "./components/hero-section";
 import { PartnersMarquee } from "./components/partners-marquee";
 import { QuoteSection } from "./components/quote-section";
@@ -15,6 +16,7 @@ export default function Home() {
         <PartnersMarquee />
         <QuoteSection />
         <AboutSection />
+        <WhatWillItBeSection />
       </main>
 
       <SiteFooter />

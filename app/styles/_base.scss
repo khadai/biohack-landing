@@ -16,8 +16,18 @@ body {
   border-top: 2px solid var(--line);
 }
 
+.section.narrow {
+  padding-left: 12%;
+  padding-right: 12%;
+}
+
 @media (max-width: 760px) {
   body {
     padding: 0 20px;
+  }
+
+  .section.narrow {
+    padding-left: inherit;
+    padding-right: inherit;
   }
 }
