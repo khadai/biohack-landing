@@ -2,7 +2,7 @@ import Image from "next/image";
 import scribble4 from "../assets/scribbles/scribble4.svg";
 import scribble5 from "../assets/scribbles/scribble5.svg";
 import scribble6 from "../assets/scribbles/scribble6.svg";
-import teamPicture from "../assets/team-picture.png";
+import teamPicture from "../assets/team-picture.jpg";
 import { FORM_LINK } from "../lib/constants";
 
 export function TeamSection() {
@@ -17,7 +17,26 @@ export function TeamSection() {
       </div>
 
       <div className="team-section__image-wrap">
-        <Image src={teamPicture} alt="Команда учасниць готує експеримент" />
+        <Image
+          src={teamPicture}
+          alt="Команда учасниць готує експеримент"
+          // height={340}
+          // objectFit="contain"
+          // fill
+          // width={0}
+          // height={300}
+          // sizes="100vw"
+          // style={{
+          //   width: "auto",
+          //   height: "100%",
+          // }}
+          fill
+          // priority
+          style={{
+            objectFit: "cover",
+            objectPosition: "center",
+          }}
+        />
       </div>
 
       <div className="team-section__meta">
