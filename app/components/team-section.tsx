@@ -1,4 +1,7 @@
 import Image from "next/image";
+import scribble4 from "../assets/scribbles/scribble4.svg";
+import scribble5 from "../assets/scribbles/scribble5.svg";
+import scribble6 from "../assets/scribbles/scribble6.svg";
 import teamPicture from "../assets/team-picture.png";
 import { FORM_LINK } from "../lib/constants";
 
@@ -35,9 +38,15 @@ export function TeamSection() {
             <br />
             подарунки та сертифікати.
           </p>
+          <Image
+            src={scribble4}
+            alt=""
+            className="team-section__scribble team-section__scribble--4"
+            width={52}
+            height={66}
+            aria-hidden
+          />
         </div>
-
-        <div className="team-section__burst" aria-hidden />
 
         <div className="team-section__card team-section__card--right">
           <p>
@@ -45,13 +54,27 @@ export function TeamSection() {
             <br />
             <span>біотех-компаній.</span>
           </p>
+          <Image
+            src={scribble5}
+            alt=""
+            className="team-section__scribble team-section__scribble--5"
+            width={52}
+            height={66}
+            aria-hidden
+          />
         </div>
-
-        <div className="team-section__spark" aria-hidden />
       </div>
 
       <p className="team-section__coffee">
-        <span aria-hidden>+</span> Кава-брейки включені
+        <Image
+          src={scribble6}
+          alt=""
+          className="team-section__scribble team-section__scribble--6"
+          width={29}
+          height={29}
+          aria-hidden
+        />{" "}
+        Кава-брейки включені
       </p>
     </section>
   );
