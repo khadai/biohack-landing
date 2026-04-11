@@ -9,11 +9,13 @@ body {
   margin: 0 auto;
   max-width: 1440px;
   min-height: 100vh;
-  padding: 0 20px;
+  width: 100%;
+  //padding: 0 20px;
 }
 
 .section {
   border-top: 2px solid var(--line);
+  padding: 0 20px;
 }
 
 .section.narrow {
@@ -23,11 +25,11 @@ body {
 
 @media (max-width: 760px) {
   body {
-    padding: 0 20px;
+    //padding: 0 20px;
   }
 
   .section.narrow {
-    padding-left: inherit;
-    padding-right: inherit;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }

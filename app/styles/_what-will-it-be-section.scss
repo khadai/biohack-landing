@@ -1,6 +1,6 @@
 .what-will {
-  --what-blue: #2920EE;
-  --what-lime: #A2EE25;
+  --what-blue: #2920ee;
+  --what-lime: #a2ee25;
 
   //background: #ffffff;
   padding-block: clamp(2.6rem, 6.5vw, 5rem);
@@ -36,11 +36,11 @@
 }
 
 .what-will__scribble-2 {
-   display: block;
-   width: clamp(100px, 22vw, 180px);
-   height: auto;
-   margin-bottom: 0.35rem;
- }
+  display: block;
+  width: clamp(100px, 22vw, 180px);
+  height: auto;
+  margin-bottom: 0.35rem;
+}
 
 .what-will__grid {
   display: grid;
@@ -136,7 +136,7 @@
     transform: rotate(1.2deg);
     font-size: 1.15rem;
   }
-  .what-will__intro{
+  .what-will__intro {
     font-size: 1.5rem;
   }
 
@@ -152,5 +152,9 @@
   .what-will__docs-btn {
     justify-content: center;
     width: 100%;
+  }
+
+  .what-will__scribble-1 {
+    margin-bottom: 0rem;
   }
 }
