@@ -10,6 +10,7 @@
   background: var(--background);
   border-bottom: 2px solid black;
   margin-bottom: -2px;
+  padding: 1rem;
 }
 
 .brand {
@@ -67,7 +68,7 @@
 @media (max-width: 760px) {
   .header {
     flex-wrap: wrap;
-    padding-block: 1rem;
+    //padding: 1rem;
   }
 
   .nav-links {

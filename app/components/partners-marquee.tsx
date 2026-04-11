@@ -7,7 +7,7 @@ import { ReactElement } from "react";
 
 export function PartnersMarquee() {
   return (
-    <section className="section partners">
+    <section className=" partners">
       <Marquee
         autoFill
         speed={42}
