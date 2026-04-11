@@ -14,7 +14,7 @@ export function SiteFooter() {
           <span>
             <p style={{ fontWeight: 500 }}>Email</p>
             <p>
-              <a href="mailto:biohackathon-ua@gmail.com">biohackathon-ua@gmail.com</a>
+              <a href="mailto:biohackathon.ua@gmail.com">biohackathon.ua@gmail.com</a>
             </p>
           </span>
           <span>
