@@ -28,13 +28,19 @@
   //font-weight: 700;
 }
 
-.what-will__scribble {
+.what-will__scribble-1 {
   display: block;
-  width: clamp(72px, 14vw, 96px);
+  width: clamp(100px, 22vw, 180px);
   height: auto;
-  margin-bottom: 0.35rem;
-  color: var(--what-blue);
+  margin-bottom: -1.35rem;
 }
+
+.what-will__scribble-2 {
+   display: block;
+   width: clamp(100px, 22vw, 180px);
+   height: auto;
+   margin-bottom: 0.35rem;
+ }
 
 .what-will__grid {
   display: grid;
@@ -128,10 +134,15 @@
   .what-will__card--cw,
   .what-will__card--ccw {
     transform: rotate(1.2deg);
+    font-size: 1.15rem;
+  }
+  .what-will__intro{
+    font-size: 1.5rem;
   }
 
   .what-will__slot--2 .what-will__card {
     transform: rotate(-1.2deg);
+    font-size: 1.15rem;
   }
 
   .what-will__cta {

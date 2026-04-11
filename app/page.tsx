@@ -14,7 +14,7 @@ export default function Home() {
       <main>
         <HeroSection />
         <PartnersMarquee />
-        <QuoteSection />
+        {/*<QuoteSection />*/}
         <AboutSection />
         <WhatWillItBeSection />
       </main>
