@@ -1,0 +1,23 @@
+body {
+  background: var(--background);
+  color: var(--text-primary);
+  font-family: inherit;
+  letter-spacing: 0.01em;
+}
+
+.landing {
+  margin: 0 auto;
+  max-width: 1440px;
+  min-height: 100vh;
+  padding: 0 20px;
+}
+
+.section {
+  border-top: 2px solid var(--line);
+}
+
+@media (max-width: 760px) {
+  body {
+    padding: 0 20px;
+  }
+}

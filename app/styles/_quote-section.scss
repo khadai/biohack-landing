@@ -1,0 +1,13 @@
+.quote {
+  padding-block: 2.05rem 2.3rem;
+  padding-block-end: 0;
+  font-size: clamp(1.42rem, 2.15vw, 2.2rem);
+  line-height: 1.25;
+  position: relative;
+  overflow: hidden;
+}
+
+.highlight {
+  background-color: var(--accent);
+  padding-inline: 0.2em;
+}

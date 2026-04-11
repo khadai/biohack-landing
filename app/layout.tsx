@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Fira_Mono } from "next/font/google";
-import "./globals.css";
+import "./tailwind.css";
+import "./globals.scss";
 
 const firaMono = Fira_Mono({
   weight: ["400", "500", "700"],

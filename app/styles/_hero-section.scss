@@ -1,0 +1,103 @@
+.hero {
+  display: grid;
+  grid-template-columns: minmax(320px, 1.2fr) minmax(30px, auto) 1fr;
+  gap: clamp(1rem, 2.3vw, 2.9rem);
+  align-items: stretch;
+  padding-block: clamp(1.5rem, 3.3vw, 2.25rem);
+}
+
+.hero-image-wrap {
+  overflow: hidden;
+  min-height: 430px;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.hero-meta {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-size: 1.55rem;
+  letter-spacing: 0.015em;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.hero-content h1 {
+  margin: 0.15rem 0 0;
+  font-size: clamp(2.45rem, 4.65vw, 4.1rem);
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.015em;
+}
+
+.hero-subtitle {
+  margin: 1rem 0 0;
+  font-size: clamp(1.45rem, 2.4vw, 1.75rem);
+  color: var(--text-secondary);
+}
+
+.hero-copy {
+  margin: 1.15rem 0 0;
+  font-size: 1rem;
+  line-height: 1.45;
+  color: #373535;
+}
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 21px;
+  margin-top: 1.65rem;
+}
+
+.primary-button {
+  background: var(--button);
+  color: #fff;
+  text-decoration: none;
+  padding: 0.86rem 1.3rem;
+  font-size: 1.25rem;
+  border: 1px solid #fff;
+}
+
+.hero-note {
+  display: inline-flex;
+  align-items: center;
+  min-height: 48px;
+  padding: 12px 1.35rem;
+  font-size: 1rem;
+  line-height: 1;
+  background:
+    linear-gradient(#000, var(--line)) left top / 10px 2px no-repeat,
+    linear-gradient(#000, var(--line)) left bottom / 10px 2px no-repeat,
+    linear-gradient(#000, var(--line)) left center / 2px 100% no-repeat,
+    linear-gradient(#000, var(--line)) right top / 10px 2px no-repeat,
+    linear-gradient(#000, var(--line)) right bottom / 10px 2px no-repeat,
+    linear-gradient(#000, var(--line)) right center / 2px 100% no-repeat;
+}
+
+@media (max-width: 1080px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-meta {
+    writing-mode: initial;
+    transform: none;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 760px) {
+  .hero-actions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero-note {
+    margin-top: 0.3rem;
+  }
+}
